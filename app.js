@@ -16,7 +16,7 @@ let app = express();
 const dbConnection = async () => {
   console.log(`Connecting to database at: ${process.env.DATABASE}`);
   try {
-    await mongoose.connect(process.env.DATABASE);
+    await mongoose.connect(`${process.env.DATABASE}`);
     console.log(`Connected to the database at: ${process.env.DATABASE}`);
   } catch (e) {
     console.log(`Database failed to connect: ${e.message}`);
