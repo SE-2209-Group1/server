@@ -1,35 +1,36 @@
 {
-  "name": "server",
-  "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
-  "type": "module",
-  "scripts": {
-    "test": "SET NODE_ENV=test&& mocha --timeout=10000 --exit",
-    "start": "NODE_ENV=production node ./app"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/SE-2209-Group1/DFX-Server-Group1.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/SE-2209-Group1/DFX-Server-Group1/issues"
-  },
-  "homepage": "https://github.com/SE-2209-Group1/DFX-Server-Group1#readme",
-  "dependencies": {
-    "body-parser": "^1.20.1",
-    "cors": "^2.8.5",
-    "dotenv": "^16.0.3",
-    "express": "^4.18.2",
-    "express-validator": "^6.14.2",
-    "mongoose": "^6.7.5"
-  },
-  "devDependencies": {
-    "chai": "^4.3.7",
-    "chai-http": "^4.3.0",
-    "mocha": "^10.1.0"
-  }
+	"name": "server",
+	"version": "1.0.0",
+	"description": "",
+	"main": "app.js",
+	"type": "module",
+	"scripts": {
+		"test": "SET NODE_ENV=test&& mocha --timeout=10000 --exit",
+		"start": "NODE_ENV=production node ./app",
+		"dev": "nodemon server"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/SE-2209-Group1/DFX-Server-Group1.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/SE-2209-Group1/DFX-Server-Group1/issues"
+	},
+	"homepage": "https://github.com/SE-2209-Group1/DFX-Server-Group1#readme",
+	"dependencies": {
+		"body-parser": "^1.20.1",
+		"cors": "^2.8.5",
+		"dotenv": "^16.0.3",
+		"express": "^4.18.2",
+		"express-validator": "^6.14.2",
+		"mongoose": "^6.7.5"
+	},
+	"devDependencies": {
+		"chai": "^4.3.7",
+		"chai-http": "^4.3.0",
+		"mocha": "^10.1.0"
+	}
 }
