@@ -8,6 +8,7 @@ import { router as addProfileRouter } from "../server/routes/addProfileRouter.js
 import { router as getProfileRouter } from "../server/routes/getProfileRouter.js";
 import { router as addUnidegreeRouter } from "../server/routes/addUnidegreeRouter.js";
 import { router as getUnidegreeRouter } from "../server/routes/getUnidegreeRouter.js";
+import { router as yourTrainingRouter } from "../server/routes/yourTraining.js";
 
 // dotenv.config({ path: `.env.${process.env.NODE_ENV}` });
 dotenv.config();
@@ -32,6 +33,7 @@ app.use(`/addprofiles`, addProfileRouter);
 app.use(`/getprofiles`, getProfileRouter);
 app.use(`/addunidegree`, addUnidegreeRouter);
 app.use(`/getunidegree`, getUnidegreeRouter);
+app.use(`/yourTraining`, yourTrainingRouter);
 
 dbConnection();
 
