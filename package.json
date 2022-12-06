@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "SET NODE_ENV=test&& mocha --timeout=10000 --exit",
-    "start": "SET NODE_ENV=dev&& nodemon app"
+    "start": "NODE_ENV=production node ./app"
   },
   "repository": {
     "type": "git",
