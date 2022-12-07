@@ -31,16 +31,16 @@ router.route(`/:profileid`).post(
     if (!errors.isEmpty()) {
       console.log(errors);
       return res.status(422).json({
-        message: `There is a Error in Profile Data`,
+        message: `There is a Error in information data`,
       });
     }
-    const profileData = new Profiles(req.body);
+    const informationData = new Information(req.body);
     try {
-      const profiles = await profileData.save();
-      res.status(201).json(profiles);
+      const information = await informationData.save();
+      res.status(201).json(information);
     } catch {
       res.status(400).json({
-        message: `Profile Insertion Fails`,
+        message: `Information Insertion Failed`,
       });
     }
   }
