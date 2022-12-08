@@ -17,12 +17,12 @@ dotenv.config();
 let app = express();
 
 const dbConnection = async () => {
-    try {
-        await mongoose.connect(`${process.env.DATABASE}`);
-        console.log(`Connected to the database at: ${process.env.DATABASE}`);
-    } catch (e) {
-        console.log(`Database failed to connect: ${e.message}`);
-    }
+  try {
+    await mongoose.connect(`${process.env.DATABASE}`);
+    console.log(`Connected to the database at: ${process.env.DATABASE}`);
+  } catch (e) {
+    console.log(`Database failed to connect: ${e.message}`);
+  }
 };
 
 app.use(express.urlencoded({ extended: true }));
@@ -34,12 +34,12 @@ app.use(`/getprofiles`, getProfileRouter);
 app.use(`/addunidegree`, addUnidegreeRouter);
 app.use(`/getunidegree`, getUnidegreeRouter);
 app.use(`/yourTraining`, yourTrainingRouter);
-app.use(`/:profileid/yourInformation`, getProfileRouter, informationRouter);
+app.use(`/yourInformation/`, informationRouter);
 
 dbConnection();
 
 const server = app.listen(process.env.PORT, () => {
-    console.log(`App is listening at http://localhost:${process.env.PORT}`);
+  console.log(`App is listening at http://localhost:${process.env.PORT}`);
 });
 
 export default server;
