@@ -17,7 +17,6 @@ dotenv.config();
 let app = express();
 
 const dbConnection = async () => {
-    console.log(`Connecting to database at: ${process.env.DATABASE}`);
     try {
         await mongoose.connect(`${process.env.DATABASE}`);
         console.log(`Connected to the database at: ${process.env.DATABASE}`);
@@ -35,11 +34,12 @@ app.use(`/getprofiles`, getProfileRouter);
 app.use(`/addunidegree`, addUnidegreeRouter);
 app.use(`/getunidegree`, getUnidegreeRouter);
 app.use(`/yourTraining`, yourTrainingRouter);
-app.use(`/yourInformation`, informationRouter);
+app.use(`/:profileid/yourInformation`, getProfileRouter, informationRouter);
 
 dbConnection();
 
 const server = app.listen(process.env.PORT, () => {
     console.log(`App is listening at http://localhost:${process.env.PORT}`);
 });
+
 export default server;
