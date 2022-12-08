@@ -14,7 +14,7 @@ export const router = express.Router();
 //   }
 // }
 
-router.route(`/:profileid`).post(
+router.route(`/:profileid/yourInformation`).post(
 	[
 		check("videoLink").exists().trim().escape(),
 		// check("badge").exists(),

@@ -7,7 +7,11 @@ const informationSchema = new Schema({
 			badgeName: String,
 			badgeDetails: String,
 		}],
-	scores: [{ scoreName: String, scoreNumber: Number }],
+	scores: [
+		{
+			scoreName: String,
+			scoreNumber: Number
+		}],
 	videoLink: { type: String, required: true, unique: true },
 });
 
