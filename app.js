@@ -10,6 +10,7 @@ import { router as addUnidegreeRouter } from "../server/routes/addUnidegreeRoute
 import { router as getUnidegreeRouter } from "../server/routes/getUnidegreeRouter.js";
 import { router as yourTrainingRouter } from "../server/routes/yourTraining.js";
 import { router as informationRouter } from "../server/routes/addInformationRouter.js";
+import { router as moduleRouter } from "../server/routes/getModules.js";
 
 // dotenv.config({ path: `.env.${process.env.NODE_ENV}` });
 dotenv.config();
@@ -35,6 +36,7 @@ app.use(`/addunidegree`, addUnidegreeRouter);
 app.use(`/getunidegree`, getUnidegreeRouter);
 app.use(`/yourTraining`, yourTrainingRouter);
 app.use(`/yourInformation/`, informationRouter);
+app.use(`/getModules`, moduleRouter);
 
 dbConnection();
 
