@@ -2,7 +2,7 @@ import express from "express";
 import Module from "../models/modules.model.js";
 export const router = express.Router();
 
-router.route(`/`).get((req, res) => {
+router.route(`/:profileid`).get((req, res) => {
     const profileid = req.params.profileid;
     Module.find({ profileid }, (error, modules) => {
         error

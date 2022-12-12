@@ -2,7 +2,7 @@ import express from "express";
 import Training from "../models/training.model.js";
 export const router = express.Router();
 
-router.route(`/`).get((req, res) => {
+router.route(`/:profileid`).get((req, res) => {
     const profileid = req.params.profileid;
     Training.find({ profileid }, (error, training) => {
         error
