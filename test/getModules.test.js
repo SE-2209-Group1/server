@@ -3,7 +3,7 @@ import chai from "chai";
 import { expect } from "chai";
 import chaiHttp from "chai-http";
 import server from "../app.js";
-import modulesTestData from "./modulesTestData.js";
+import modulesTestData from "./testData/modulesTestData.js";
 
 const testDataArray = modulesTestData.modules;
 
