@@ -19,6 +19,7 @@ import { router as getAwardRouter } from "../server/routes/getAwardRouter.js";
 import { router as getPortfolioRouter } from "./routes/getPortfolioRouter.js";
 import { router as addPortfolioRouter } from "./routes/addPortfolioRouter.js";
 import { router as moduleRouter } from "../server/routes/getModules.js";
+import { router as editProfileRouter } from "../server/routes/editProfileRouter.js";
 
 dotenv.config({ path: `.env.${process.env.NODE_ENV}` });
 dotenv.config();
@@ -53,6 +54,7 @@ app.use(`/getAward`, getAwardRouter);
 app.use(`/addPortfolio`, addPortfolioRouter);
 app.use(`/getPortfolio`, getPortfolioRouter);
 app.use(`/getModules`, moduleRouter);
+app.use(`/editProfile`, editProfileRouter);
 
 dbConnection();
 
